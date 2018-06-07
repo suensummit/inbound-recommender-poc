@@ -1,6 +1,6 @@
-# 失戀花園
+# 失戀花園推薦系統 PoC
 
-##### 推薦系統 PoC
+##### AI enabled recommender
 
 ## Install
 
