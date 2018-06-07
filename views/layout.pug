@@ -1,5 +1,5 @@
-- var WEBSITE_TITLE = ' 失戀花園'
-- var WEBSITE_DESC  = '失戀花園'
+- var WEBSITE_TITLE = '《心理團隊來解答》';
+- var WEBSITE_DESC  = '我的狀況很複雜，要怎麼處理？';
 
 doctype html
 html(lang="zh-tw")
@@ -15,26 +15,6 @@ html(lang="zh-tw")
 		block head_title
 			title #{WEBSITE_TITLE}
 			meta(name="description", content="#{WEBSITE_DESC}")
-
-		//- Facebook
-			meta(property="fb:app_id", content="...")
-			meta(property="og:locale", content="zh_TW")
-			meta(property="og:type", content="website")
-			block head_facebook
-				link(rel="canonical", href="...")
-				meta(property="og:url", content="...")
-				meta(property="og:title", content="#{ctrl_title || WEBSITE_TITLE}")
-				meta(property="og:description", content="#{WEBSITE_DESC}")
-				meta(property="og:image", content="...")
-				meta(property="og:image:height", content="200")
-				meta(property="og:image:width", content="200")
-				meta(property="og:image:type", content="image/png")
-
-		//- iPhone Web APP
-			meta(name="apple-mobile-web-app-capable", content="yes")
-			link(rel="apple-touch-icon-precomposed", href="/images/cloudeep.ico")
-			link(rel="apple-touch-icon", href="/images/cloudeep.ico")
-			link(rel="apple-touch-startup-image", href="/images/cloudeep.ico")
 
 		block head_style
 			link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css")
@@ -57,10 +37,7 @@ html(lang="zh-tw")
 			script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js")
 			script(src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.4.1/moment-timezone.min.js")
 			script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/zh-tw.js")
-			script(src="https://cdnjs.cloudflare.com/ajax/libs/interact.js/1.2.8/interact.min.js")
 
-			//- script(src="/javascripts/interact.min.js")
 			script(src="/javascripts/sprintf.min.js")
-			script(src="/javascripts/cloudeep_tools.js")
 
 		block body_script

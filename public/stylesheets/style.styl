@@ -2,8 +2,8 @@ $color_main = #75BDC1
 $color_dark = #94AD99
 $font_normal  = "Lato", cwTexHei, Helvetica, STHeiti, "Microsoft JhengHei", "微軟正黑體", PMingLiU, "Lucida Grande", Arial, sans-serif
 
-$height_header = 50px
-$height_footer = 30px
+$height_header = 0px
+$height_footer = 0px
 
 // Bootstap's variables, note @screen-xs-min is defined by Less, not Bootstrap.
 $screen-lg = 1200px		// Large devices (large desktops)
@@ -38,26 +38,12 @@ body
 	padding: 0
 	font-family: $font_normal
 	background-image: url('/images/bg.png')
-	// background-repeat: no-repeat
-	// background-size: 100% 100%
-	// font-size: 62.5% /* Let 1em = 10px */ 
-	font-size: 14px
-	overflow-y: scroll
-	-webkit-overflow-scrolling: touch
-
-body#deco
-	width: $width_max
-	margin: 0 auto
-	padding: 0
-	font-family: $font_normal
-	background-image: url('/uploads/bg_user.jpg')
 	background-repeat: no-repeat
 	background-size: 100% 100%
 	// font-size: 62.5% /* Let 1em = 10px */ 
 	font-size: 14px
 	overflow-y: scroll
 	-webkit-overflow-scrolling: touch
-
 
 .page
 	padding-top: 30px + $height_header
@@ -66,7 +52,7 @@ body#deco
 	min-height: 100%
 
 a:link, a:visited
-	color: #fff
+	color: #000
 	text-decoration: none
 
 table
@@ -90,8 +76,8 @@ table
 
 .btn-item
 .btn-block
-	color: #fff
-	background-color: $color_main
+	color: #000
+	background-color: #fff
 	
 /***************
  * Header & Footer
@@ -121,26 +107,37 @@ table
  ***************/
 
 .index_title
-	font-size: 7.8em
-	color: #fff
-	line-height: 1.5em
+	font-size: 5em
+	color: #000
+	text-align: center
+	line-height: 2em
 
 .index_subtitle
+	font-size: 1.8em
+	color: #000
+	line-height: 1em
+	text-align: center
+	// margin-bottom: 40px
+
+.question
 	font-size: 2.2em
 	color: #fff
-	line-height: 2.5em
-	margin-bottom: 40px
+	line-height: 1.2em
+	text-align: left
+	width: 100%
+	margin: 2%
+	padding: 0.5em
+	background-color: transparent
+	border: solid 0.2em
+	border-color: #fff
 
-.file_subtitle
-	// text-align: center
+.answer
 	font-size: 2.2em
-	color: #000
-	line-height: 2.5em
-	margin-bottom: 40px
+	color: #fff
+	line-height: 1.2em
+	margin: 2%
+	padding: 0.5em
+	text-align: center
 
-// .selector
-.item
-	position: absolute
-	left: -500px
-	border-radius: 100px
-	box-sizing: border-box
+img
+	width: 100%
