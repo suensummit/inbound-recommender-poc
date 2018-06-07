@@ -1,0 +1,28 @@
+{
+	"NODE_ENV": "development",
+	"development": {
+		"context.host"		: "localhost",
+		"context.port"		: "3003",
+		"context.domain"	: "",
+		"context.basepath"	: "/",
+		"folder.uploads"	: "public/uploads",
+		"folder.tmp"		: "public/tmp",
+		"url.uploads"		: "/uploads",
+		"url.tmp"			: "/tmp"
+	},
+	"testing": {
+		"context.host"		: "",
+		"context.port"		: "3003",
+		"context.domain"	: "recommender.inbound.tw",
+		"context.basepath"	: "/",
+		"folder.uploads"	: "public/uploads",
+		"folder.tmp"		: "public/tmp",
+		"url.uploads"		: "/uploads",
+		"url.tmp"			: "/tmp"
+	},
+	"staging": {
+	},
+	"production": {
+	}
+}
+
