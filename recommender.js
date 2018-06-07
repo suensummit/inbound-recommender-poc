@@ -37,9 +37,6 @@ function initConstant()
 	global.URL_UPLOADS 			= system[system.NODE_ENV]['url.uploads'];
 	global.URL_TMP 				= system[system.NODE_ENV]['url.tmp'];
 
-	global.SERACH = require('./common/search_result.json');
-	global.ITEMS  = require('./common/items.json');
-
 	// console.log(global.ITEMS[0].result[0]);
 
 	// global.FACEBOOK_APP_ID 			= system[system.NODE_ENV]['facebook.id'];
@@ -69,7 +66,7 @@ function initApp()
 	app.set('port', global.SERVERPORT || 3000);
 	app.set('views', path.join(__dirname + '/views'));
 	app.set('view engine', 'pug');
-	app.use(favicon(path.join(__dirname + '/public/images/favicon.ico')));
+	// app.use(favicon(path.join(__dirname + '/public/images/favicon.ico')));
 	app.use(loggerMiddleware('dev'));
 	app.use(bodyParser.json());
 	app.use(bodyParser.urlencoded({ extended: true }));
