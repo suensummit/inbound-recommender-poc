@@ -2,17 +2,17 @@ extends layout
 
 block body_content
 	div(style="padding-left: 10%")
-		.row
-			.col-sm-12
-				.index_title 《心理團隊來解答》
-		.row
-			.col-sm-12
-				.index_subtitle 我的狀況很複雜，要怎麼處理？
 
 		div#question
 			.row
 				.col-sm-12
-					textarea.question(rows="5", placeholder="輸入你的心情、感情問題⋯⋯")
+					.index_title 愛情小幫手
+			.row
+				.col-sm-12
+					.index_subtitle 找找你需要什麼
+			.row
+				.col-sm-12
+					textarea.question(rows="5", placeholder="怎麼了？描述一下你們之間的感情狀況")
 			.row
 				.col-sm-4
 				.col-sm-4
@@ -20,74 +20,181 @@ block body_content
 
 		div#answer(hidden="hidden")
 			.row
-				.col-sm-4
-				.col-sm-4
-					.answer 推薦你
+				.col-sm-12
+					.index_title 推薦你
 			.row
-				.col-sm-2
-				.col-sm-4
+				.col-sm-12
+					.index_subtitle 
+			.row
+				.col-sm-3
 					img#book_1(src="")
 					.answer#book_1_title
-				.col-sm-4
+				.col-sm-3
 					img#book_2(src="")
 					.answer#book_2_title
+				.col-sm-3
+					img#book_3(src="")
+					.answer#book_3_title
+				.col-sm-3
+					img#book_4(src="")
+					.answer#book_4_title
+			.row
+				.col-sm-4
+				.col-sm-4
+					a.btn.btn-lg.btn-block(href="/") 再問一次
 
 block body_script
 	script.
 		var book_list = [
 			{
-				"title": "放不下，那就提著吧！",
+				"title": "放不下，那就提著吧",
 				"url"  : "https://inbound.tw/product/%E6%94%BE%E4%B8%8D%E4%B8%8B%E9%82%A3%E5%B0%B1%E6%8F%90%E8%91%97%E5%90%A7/",
-				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2018/03/%E6%94%BE%E4%B8%8D%E4%B8%8B%EF%BC%8C%E9%82%A3%E5%B0%B1%E6%8F%90%E8%91%97%E5%90%A7%EF%BC%81%EF%BD%9C%E9%99%B3%E4%BF%8A%E6%AC%BD-%E9%9B%BB%E5%AD%90%E6%9B%B8-%E6%AD%A3%E6%96%B9%E5%BD%A2%E5%95%86%E5%93%81.png?w=428&ssl=1",
-				"tags" : "失戀療癒, 失戀, 原諒, 放不下, 放下感情, 放下, 如何忘記一個人, 如何放下一個人, 不想, 如何放下, 死心, 忘記一個人, 放下一個人, 如何走出失戀, 失戀的人, 放不下一個人, 走不出來, 放下他, 精神醫學"
-			},
-			{
-				"title": "要挽回、復合、還是向前走？",
-				"url"  : "https://inbound.tw/product/%E8%A6%81%E6%8C%BD%E5%9B%9E%E5%BE%A9%E5%90%88%E9%82%84%E6%98%AF%E5%90%91%E5%89%8D%E8%B5%B0/",
-				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2018/04/%E8%A6%81%E6%8C%BD%E5%9B%9E%E3%80%81%E5%BE%A9%E5%90%88%E3%80%81%E9%82%84%E6%98%AF%E5%90%91%E5%89%8D%E8%B5%B0%EF%BC%9F%E6%96%B9.png?w=845&ssl=1",
-				"tags" : "分手, 復合, 分手複合, 挽回, 放不下, 前任, 前女友, 前男友, 挽回女友, 分手後, 挽回男友, 分手後復合, 挽回感情, 重新再愛, 感情挽回, 分手復合, 分手挽回, 如何挽回, 前男友 復合"
-			},
-			{
-				"title": "如何安慰失戀者？",
-				"url"  : "https://inbound.tw/product/%E5%A6%82%E4%BD%95%E5%AE%89%E6%85%B0%E5%A4%B1%E6%88%80%E8%80%85/",
-				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2018/05/%E5%9B%9B%E5%80%8Bng%E5%AE%89%E6%85%B0%E5%A4%B1%E6%88%80%E8%80%85%E7%9A%84%E6%96%B9%E6%B3%95%EF%BD%9C%E5%A4%B1%E6%88%80%E8%8A%B1%E5%9C%92-%E6%9E%97%E4%BF%8A%E6%88%90-%E8%87%A8%E5%BA%8A%E5%BF%83%E7%90%86%E5%B8%AB-1-1.png?resize=1024%2C1024&ssl=1",
-				"tags" : "失戀, 情緒, 安慰, 陪伴, 關心的話, 怎麼安慰人, 安慰人的話, 如何安慰人, 失戀 安慰, 安慰語錄"
-			},
-			{
-				"title": "依附理論完全手冊：他真的愛我嗎？",
-				"url"  : "https://inbound.tw/product/%E4%BE%9D%E6%88%80%E7%90%86%E8%AB%96%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8A%E4%BB%96%E7%9C%9F%E7%9A%84%E6%84%9B%E6%88%91%E5%97%8E/",
-				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2018/05/%E4%BE%9D%E6%88%80%E7%90%86%E8%AB%96%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8A%EF%BC%9A%E4%BB%96%E7%9C%9F%E7%9A%84%E6%84%9B%E6%88%91%E5%97%8E%EF%BC%9F%E6%96%B9.png?w=634&ssl=1",
-				"tags" : "愛情, 安全感, 不安全感, 依附理論, 依戀理論"
-			},
-			{
-				"title": "拋開完美主義的枷鎖，做完美的自己",
-				"url"  : "https://inbound.tw/product/%E6%8B%8B%E9%96%8B%E5%AE%8C%E7%BE%8E%E4%B8%BB%E7%BE%A9%E7%9A%84%E6%9E%B7%E9%8E%96%E5%81%9A%E5%AE%8C%E7%BE%8E%E7%9A%84%E8%87%AA%E5%B7%B1/",
-				"img"  : "https://i0.wp.com/inbound.tw/wp-content/uploads/2018/05/%E6%8B%8B%E9%96%8B%E5%AE%8C%E7%BE%8E%E4%B8%BB%E7%BE%A9%E7%9A%84%E6%9E%B7%E9%8E%96%EF%BC%8C%E5%81%9A%E5%AE%8C%E7%BE%8E%E7%9A%84%E8%87%AA%E5%B7%B1.png?w=634&ssl=1",
-				"tags" : "愛情, 安全感, 不安全感, 完美主義"
-			},
-			{
-				"title": "婚姻完全手冊I：結婚之前，你可以問自己的三件事",
-				"url"  : "https://inbound.tw/product/%E5%A9%9A%E5%A7%BB%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8Ai%E7%B5%90%E5%A9%9A%E4%B9%8B%E5%89%8D%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%95%8F%E8%87%AA%E5%B7%B1%E7%9A%843%E4%BB%B6%E4%BA%8B/",
-				"img"  : "https://i0.wp.com/inbound.tw/wp-content/uploads/2018/04/%E5%A9%9A%E5%A7%BB%E6%89%8B%E5%86%8AI%E5%B0%81%E9%9D%A2.png?w=542&ssl=1",
-				"tags" : "婚姻, 我該結婚嗎, 嫁人, 結婚, 媽寶, 陪伴, 夫妻, Mr. Right, 結婚登記, 同居, 媽寶定義, 孝順, 老公"
-			},
-			{
-				"title": "婚姻完全手冊II：新婚後，五個迷思與四個原則",
-				"url"  : "https://inbound.tw/product/%E5%A9%9A%E5%A7%BB%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8Aii%E6%96%B0%E5%A9%9A%E5%BE%8C%E4%BA%94%E5%80%8B%E8%BF%B7%E6%80%9D%E8%88%87%E5%9B%9B%E5%80%8B%E5%8E%9F%E5%89%87/",
-				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2018/04/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-04-28-%E4%B8%8B%E5%8D%8810.23.15-%E6%8B%B7%E8%B2%9D.png?resize=1024%2C1024&ssl=1",
-				"tags" : "婚姻, 吵架, 婚姻經營, 新婚, 準婆婆, 經營婚姻, 結婚溝通, 婚後生活"
-			},
-			{
-				"title": "婚姻完全手冊III：婚姻中，面臨的威脅與關係修復",
-				"url"  : "https://inbound.tw/product/%E5%A9%9A%E5%A7%BB%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8Aiii%E5%A9%9A%E5%A7%BB%E4%B8%AD%E9%9D%A2%E8%87%A8%E7%9A%84%E5%A8%81%E8%84%85%E8%88%87%E9%97%9C%E4%BF%82%E4%BF%AE%E5%BE%A9/",
-				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2018/04/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-04-29-%E4%B8%8B%E5%8D%883.19.56-%E6%8B%B7%E8%B2%9D.png?resize=1024%2C1024&ssl=1",
-				"tags" : "婚姻, 外遇, 出軌, 婚外情, 離婚, 婚姻經營, 婆媳關係, 精神外遇, 戴綠帽, 磨合期, 婆媳問題, 婆媳, 老公外遇, 偷情, 婆婆, 問題男人, 好婆婆"
+				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2018/03/%E6%94%BE%E4%B8%8D%E4%B8%8B%EF%BC%8C%E9%82%A3%E5%B0%B1%E6%8F%90%E8%91%97%E5%90%A7%EF%BC%81%E5%8E%BB%E8%83%8C%EF%BD%9C%E9%99%B3%E4%BF%8A%E6%AC%BD-%E9%9B%BB%E5%AD%90%E6%9B%B8-%E6%AD%A3%E6%96%B9%E5%BD%A2%E5%95%86%E5%93%81.png?resize=250%2C250&ssl=1",
+				"tags" : "放下, 放不下, 失戀, 分手"
 			},
 			{
 				"title": "三角關係完全手冊",
 				"url"  : "https://inbound.tw/product/%E4%B8%89%E8%A7%92%E9%97%9C%E4%BF%82%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8A/",
-				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2017/03/%E4%B8%89%E8%A7%92%E9%97%9C%E4%BF%82%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8A-%E2%80%93-%E9%9B%BB%E5%AD%90%E6%9B%B8-%E9%A0%90%E8%B3%BC%E5%B0%81%E9%9D%A2.png?w=565&ssl=1",
-				"tags" : "小三, 女人, 劈腿, 三角關係, 原配, 小王, 第三者扶正, 劈腿心理學, 小三心理學, 劈腿走出, 外遇, 出軌, 原諒, 捉姦, 婚外情, 婚外戀, 離婚, 精神外遇, 精神出軌"
+				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2017/03/%E4%B8%89%E8%A7%92%E9%97%9C%E4%BF%82%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8A-%E2%80%93-%E9%9B%BB%E5%AD%90%E6%9B%B8-%E9%A0%90%E8%B3%BC%E5%B0%81%E9%9D%A2.png?resize=250%2C250&ssl=1",
+				"tags" : "三角關係, 劈腿, 第三者, 出軌, 外遇"
+			},
+			{
+				"title": "要挽回、復合、還是向前走？",
+				"url"  : "https://inbound.tw/product/%E8%A6%81%E6%8C%BD%E5%9B%9E%E5%BE%A9%E5%90%88%E9%82%84%E6%98%AF%E5%90%91%E5%89%8D%E8%B5%B0/",
+				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2018/04/%E8%A6%81%E6%8C%BD%E5%9B%9E%E3%80%81%E5%BE%A9%E5%90%88%E3%80%81%E9%82%84%E6%98%AF%E5%90%91%E5%89%8D%E8%B5%B0%EF%BC%9F%EF%BC%88%E9%9B%BB%E5%AD%90%E6%9B%B8%EF%BC%89%E6%96%B9.png?w=250&ssl=1",
+				"tags" : "分手, 復合, 挽回, 放不下, 前任, 失戀"
+			},
+			{
+				"title": "如何安慰失戀者？",
+				"url"  : "https://inbound.tw/product/%E5%A6%82%E4%BD%95%E5%AE%89%E6%85%B0%E5%A4%B1%E6%88%80%E8%80%85/",
+				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2018/05/%E5%9B%9B%E5%80%8Bng%E5%AE%89%E6%85%B0%E5%A4%B1%E6%88%80%E8%80%85%E7%9A%84%E6%96%B9%E6%B3%95%EF%BD%9C%E5%A4%B1%E6%88%80%E8%8A%B1%E5%9C%92-%E6%9E%97%E4%BF%8A%E6%88%90-%E8%87%A8%E5%BA%8A%E5%BF%83%E7%90%86%E5%B8%AB-1-1.png?resize=250%2C250&ssl=1",
+				"tags" : "失戀,安慰,陪伴, 失戀安慰"
+			},
+			{
+				"title": "曖昧：我們之間，是愛嗎？",
+				"url"  : "https://inbound.tw/product/%E6%9B%96%E6%98%A7%E6%88%91%E5%80%91%E4%B9%8B%E9%96%93%E6%98%AF%E6%84%9B%E5%97%8E/",
+				"img"  : "https://i0.wp.com/inbound.tw/wp-content/uploads/2018/05/%E6%9B%96%E6%98%A7%EF%BC%9A%E6%88%91%E5%80%91%E4%B9%8B%E9%96%93%EF%BC%8C%E6%98%AF%E6%84%9B%E5%97%8E%EF%BC%9F%E5%B0%81%E9%9D%A2%E5%9C%96.png?resize=250%2C250&ssl=1",
+				"tags" : "曖昧,告白,單戀, 承諾,單身"
+			},
+			{
+				"title": "依附理論完全手冊：他真的愛我嗎？",
+				"url"  : "https://inbound.tw/product/%E4%BE%9D%E6%88%80%E7%90%86%E8%AB%96%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8A%E4%BB%96%E7%9C%9F%E7%9A%84%E6%84%9B%E6%88%91%E5%97%8E/",
+				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2018/05/%E4%BE%9D%E6%88%80%E7%90%86%E8%AB%96%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8A%EF%BC%9A%E4%BB%96%E7%9C%9F%E7%9A%84%E6%84%9B%E6%88%91%E5%97%8E%EF%BC%9F%E6%96%B9.png?resize=250%2C250&ssl=1",
+				"tags" : "依附, 依戀, 安全感, 焦慮, 逃避, 自己"
+			},
+			{
+				"title": "拋開完美主義的枷鎖，做完美的自己",
+				"url"  : "https://inbound.tw/product/%E6%8B%8B%E9%96%8B%E5%AE%8C%E7%BE%8E%E4%B8%BB%E7%BE%A9%E7%9A%84%E6%9E%B7%E9%8E%96%E5%81%9A%E5%AE%8C%E7%BE%8E%E7%9A%84%E8%87%AA%E5%B7%B1/",
+				"img"  : "https://i0.wp.com/inbound.tw/wp-content/uploads/2018/05/%E6%8B%8B%E9%96%8B%E5%AE%8C%E7%BE%8E%E4%B8%BB%E7%BE%A9%E7%9A%84%E6%9E%B7%E9%8E%96%EF%BC%8C%E5%81%9A%E5%AE%8C%E7%BE%8E%E7%9A%84%E8%87%AA%E5%B7%B1.png?resize=250%2C250&ssl=1",
+				"tags" : "完美主義, 安全感, 自己"
+			},
+			{
+				"title": "依附理論／完美主義合購組",
+				"url"  : "https://inbound.tw/product/%E4%BE%9D%E9%99%84%E7%90%86%E8%AB%96%E5%AE%8C%E7%BE%8E%E4%B8%BB%E7%BE%A9%E5%90%88%E8%B3%BC%E7%B5%84/",
+				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2018/05/%E5%AE%8C%E7%BE%8E%E4%B8%BB%E7%BE%A9%E4%BE%9D%E9%99%84%E7%90%86%E8%AB%96%E5%AE%8C%E7%BE%8E%E4%B8%BB%E7%BE%A9%E4%BE%9D%E9%99%84%E7%90%86%E8%AB%96.png?w=250&ssl=1",
+				"tags" : "依附, 依戀, 完美主義, 安全感"
+			},
+			{
+				"title": "婚姻完全手冊I：結婚之前，你可以問自己的三件事",
+				"url"  : "https://inbound.tw/product/%E5%A9%9A%E5%A7%BB%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8Ai%E7%B5%90%E5%A9%9A%E4%B9%8B%E5%89%8D%E4%BD%A0%E5%8F%AF%E4%BB%A5%E5%95%8F%E8%87%AA%E5%B7%B1%E7%9A%843%E4%BB%B6%E4%BA%8B/",
+				"img"  : "https://i0.wp.com/inbound.tw/wp-content/uploads/2018/04/%E5%A9%9A%E5%A7%BB%E6%89%8B%E5%86%8AI%E5%B0%81%E9%9D%A2.png?resize=250%2C250&ssl=1",
+				"tags" : "結婚, 婚姻, 媽寶, 婚前"
+			},
+			{
+				"title": "婚姻完全手冊II：新婚後，五個迷思與四個原則",
+				"url"  : "https://inbound.tw/product/%E5%A9%9A%E5%A7%BB%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8Aii%E6%96%B0%E5%A9%9A%E5%BE%8C%E4%BA%94%E5%80%8B%E8%BF%B7%E6%80%9D%E8%88%87%E5%9B%9B%E5%80%8B%E5%8E%9F%E5%89%87/",
+				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2018/04/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-04-29-%E4%B8%8B%E5%8D%883.19.56-%E6%8B%B7%E8%B2%9D.png?resize=250%2C250&ssl=1",
+				"tags" : "結婚, 婚姻, 吵架, 溝通"
+			},
+			{
+				"title": "婚姻完全手冊III：婚姻中，面臨的威脅與關係修復",
+				"url"  : "https://inbound.tw/product/%E5%A9%9A%E5%A7%BB%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8Aiii%E5%A9%9A%E5%A7%BB%E4%B8%AD%E9%9D%A2%E8%87%A8%E7%9A%84%E5%A8%81%E8%84%85%E8%88%87%E9%97%9C%E4%BF%82%E4%BF%AE%E5%BE%A9/",
+				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2018/04/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7-2018-04-29-%E4%B8%8B%E5%8D%883.19.56-%E6%8B%B7%E8%B2%9D.png?resize=250%2C250&ssl=1",
+				"tags" : "婚姻, 外遇, 婆媳, 婚外情, 離婚"
+			},
+			{
+				"title": "婚姻完全手冊系列",
+				"url"  : "https://inbound.tw/product/%E5%A9%9A%E5%A7%BB%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8A%E7%B3%BB%E5%88%97/",
+				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2018/04/%E5%A9%9A%E5%A7%BB%E5%AE%8C%E5%85%A8%E6%89%8B%E5%86%8A%E7%B3%BB%E5%88%97.png?resize=250%2C250&ssl=1",
+				"tags" : "婚姻, 離婚, 結婚, 溝通, 吵架"
+			},
+			{
+				"title": "後分手關係：我們，還能當朋友嗎？",
+				"url"  : "https://inbound.tw/product/%E5%BE%8C%E5%88%86%E6%89%8B%E9%97%9C%E4%BF%82%E6%88%91%E5%80%91%E9%82%84%E8%83%BD%E7%95%B6%E6%9C%8B%E5%8F%8B%E5%97%8E/",
+				"img"  : "https://i0.wp.com/inbound.tw/wp-content/uploads/2018/07/%E5%BE%8C%E5%88%86%E6%89%8B%E9%97%9C%E4%BF%82%EF%BC%9A%E6%88%91%E5%80%91%EF%BC%8C%E9%82%84%E8%83%BD%E7%95%B6%E6%9C%8B%E5%8F%8B%E5%97%8E%EF%BC%9F%E5%B0%81%E9%9D%A2%E2%94%82%E5%A4%B1%E6%88%80%E8%8A%B1%E5%9C%92.png?w=250&ssl=1",
+				"tags" : "分手, 失戀, 放不下, 當朋友, 復合"
+			},
+			{
+				"title": "我們的愛怎麼了？在無力想放手前，為彼此再試一次",
+				"url"  : "https://inbound.tw/product/%E6%88%91%E5%80%91%E7%9A%84%E6%84%9B%E6%80%8E%E9%BA%BC%E4%BA%86%E5%88%86%E6%89%8B%E5%89%8D%E7%9A%84%E9%97%9C%E4%BF%82%E6%8C%BD%E6%95%91/",
+				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2018/07/%E6%88%91%E5%80%91%E7%9A%84%E6%84%9B%E6%80%8E%E9%BA%BC%E4%BA%86%EF%BC%9F%E5%88%86%E6%89%8B%E5%89%8D%E7%9A%84%E9%97%9C%E4%BF%82%E6%8C%BD%E6%95%91%E5%B0%81%E9%9D%A2%E2%94%82%E5%A4%B1%E6%88%80%E8%8A%B1%E5%9C%92-.png?resize=250%2C250&ssl=1",
+				"tags" : "冷戰, 分手, 吵架, 挽回, 恐怖情人"
+			},
+			{
+				"title": "談戀愛就變了個人？ – 如何照顧戀愛中的內在小孩",
+				"url"  : "https://inbound.tw/product/%E8%AB%87%E6%88%80%E6%84%9B%E5%B0%B1%E8%AE%8A%E4%BA%86%E5%80%8B%E4%BA%BA%E5%A6%82%E4%BD%95%E7%85%A7%E9%A1%A7%E6%88%80%E6%84%9B%E4%B8%AD%E7%9A%84%E5%85%A7%E5%9C%A8%E5%B0%8F%E5%AD%A9/",
+				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2017/07/%E8%AB%87%E6%88%80%E6%84%9B%E5%B0%B1%E8%AE%8A%E4%BA%86%E5%80%8B%E4%BA%BA.png?w=250&ssl=1",
+				"tags" : "內在小孩, 安全感, 戀愛, 吵架, 自己"
+			},
+			{
+				"title": "為何我總是挑到錯的人？ – 談潛意識中的伴侶選擇",
+				"url"  : "https://inbound.tw/product/%E7%82%BA%E4%BD%95%E6%88%91%E7%B8%BD%E6%98%AF%E6%8C%91%E5%88%B0%E9%8C%AF%E7%9A%84%E4%BA%BA%E8%AB%87%E6%BD%9B%E6%84%8F%E8%AD%98%E4%B8%AD%E7%9A%84%E4%BC%B4%E4%BE%B6%E9%81%B8%E6%93%87/",
+				"img"  : "https://i0.wp.com/inbound.tw/wp-content/uploads/2017/07/%E7%82%BA%E4%BD%95%E6%88%91%E7%B8%BD%E6%98%AF%E6%8C%91%E5%88%B0%E9%8C%AF%E7%9A%84%E4%BA%BA%EF%BC%9F.png?w=250&ssl=1",
+				"tags" : "戀愛, 分手, 自己, 愛情"
+			},
+			{
+				"title": "當愛在曖昧不明時 – 讀懂我們最後究竟是否只會是朋友",
+				"url"  : "https://inbound.tw/product/%E7%95%B6%E6%84%9B%E5%9C%A8%E6%9B%96%E6%98%A7%E4%B8%8D%E6%98%8E%E6%99%82%E8%AE%80%E6%87%82%E6%88%91%E5%80%91%E6%9C%80%E5%BE%8C%E7%A9%B6%E7%AB%9F%E6%98%AF%E5%90%A6%E5%8F%AA%E6%9C%83%E6%98%AF%E6%9C%8B/",
+				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2017/07/%E7%95%B6%E6%84%9B%E5%9C%A8%E6%9B%96%E6%98%A7%E4%B8%8D%E6%98%8E%E6%99%82-.png?w=250&ssl=1",
+				"tags" : "曖昧,告白,單戀, 承諾,單身"
+			},
+			{
+				"title": "總是害怕你會離開我 – 逃跑者的心中小劇場",
+				"url"  : "https://inbound.tw/product/%E7%B8%BD%E6%98%AF%E5%AE%B3%E6%80%95%E4%BD%A0%E6%9C%83%E9%9B%A2%E9%96%8B%E6%88%91%E9%80%83%E8%B7%91%E8%80%85%E7%9A%84%E5%BF%83%E4%B8%AD%E5%B0%8F%E5%8A%87%E5%A0%B4/",
+				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2017/07/%E9%80%83%E8%B7%91%E8%80%85%E7%9A%84%E5%BF%83%E4%B8%AD%E5%B0%8F%E5%8A%87%E5%A0%B4.png?w=250&ssl=1",
+				"tags" : "逃避, 溝通, 依附, 冷戰, 分手"
+			},
+			{
+				"title": "為何我總掉入同一個愛情的坑 - 原生家庭對愛情選擇的影響",
+				"url"  : "https://inbound.tw/product/%E7%82%BA%E4%BD%95%E6%88%91%E7%B8%BD%E6%8E%89%E5%85%A5%E5%90%8C%E4%B8%80%E5%80%8B%E6%84%9B%E6%83%85%E7%9A%84%E5%9D%91%E5%8E%9F%E7%94%9F%E5%AE%B6%E5%BA%AD%E5%B0%8D%E6%84%9B%E6%83%85%E9%81%B8%E6%93%87/",
+				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2017/07/%E5%91%A8%E6%85%95%E5%A7%BF%E5%BF%83%E7%90%86%E5%B8%AB%E7%82%BA%E4%BD%95%E6%88%91%E7%B8%BD%E6%8E%89%E5%85%A5%E5%90%8C%E4%B8%80%E5%80%8B%E6%84%9B%E6%83%85%E7%9A%84%E5%9D%91%EF%BC%9F.png?w=250&ssl=1",
+				"tags" : "原生家庭, 焦慮, 逃避, 溝通, 依附"
+			},
+			{
+				"title": "總是害怕你會離開我 – 追求者的心中小劇場",
+				"url"  : "https://inbound.tw/product/%E7%B8%BD%E6%98%AF%E5%AE%B3%E6%80%95%E4%BD%A0%E6%9C%83%E9%9B%A2%E9%96%8B%E6%88%91%E8%BF%BD%E6%B1%82%E8%80%85%E7%9A%84%E5%BF%83%E4%B8%AD%E5%B0%8F%E5%8A%87%E5%A0%B4/",
+				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2017/07/%E5%91%A8%E6%85%95%E5%A7%BF%E5%BF%83%E7%90%86%E5%B8%AB%E8%BF%BD%E6%B1%82%E8%80%85%E7%9A%84%E5%B0%8F%E5%8A%87%E5%A0%B4.png?w=250&ssl=1",
+				"tags" : "焦慮, 安全感, 失戀, 溝通, 依附"
+			},
+			{
+				"title": "愛情心理學全系列",
+				"url"  : "https://inbound.tw/product/%E5%BF%83%E6%9B%A6%E8%AB%AE%E5%95%86%E6%89%80%E5%A4%B1%E6%88%80%E8%8A%B1%E5%9C%92%E6%84%9B%E6%83%85%E5%BF%83%E7%90%86%E5%AD%B8%E5%85%A8%E7%B3%BB%E5%88%97/",
+				"img"  : "https://i0.wp.com/inbound.tw/wp-content/uploads/2017/10/%E3%80%90%E5%BF%83%E6%9B%A6%E8%AB%AE%E5%95%86%E6%89%80%EF%BC%B8%E5%A4%B1%E6%88%80%E8%8A%B1%E5%9C%92%E3%80%91%E6%84%9B%E6%83%85%E5%BF%83%E7%90%86%E5%AD%B8.png?w=250&ssl=1",
+				"tags" : "心理學, 戀愛, 愛情, 心理醫生"
+			},
+			{
+				"title": "你的愛情是枷鎖還是羈絆",
+				"url"  : "https://inbound.tw/product/%E9%97%9C%E4%BF%82%E7%B5%90%E6%9D%9F%E6%84%9B%E6%83%85%E6%98%AF%E6%9E%B7%E9%8E%96%E9%82%84%E6%98%AF%E7%BE%88%E7%B5%86%E6%B5%B7%E8%8B%94%E7%86%8A%E5%91%A8%E6%85%95%E5%A7%BF/",
+				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2017/02/%E6%84%9B%E6%83%85%E6%98%AF%E6%9E%B7%E9%8E%96%E9%82%84%E6%98%AF%E7%BE%88%E7%B5%86-%E6%B5%B7%E8%8B%94%E7%86%8A%EF%BC%B8%E5%91%A8%E6%85%95%E5%A7%BF.png?w=250&ssl=1",
+				"tags" : "情緒勒索,焦慮, 安全感, 溝通, 愛情"
+			},
+			{
+				"title": "愛上不該愛的人",
+				"url"  : "https://inbound.tw/product/%E9%97%9C%E4%BF%82%E7%B5%90%E6%9D%9F%E6%84%9B%E4%B8%8A%E4%B8%8D%E8%A9%B2%E6%84%9B%E7%9A%84%E4%BA%BA%E6%B5%B7%E8%8B%94%E7%86%8A%E9%99%B3%E9%9D%9C%E6%80%A1/",
+				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2017/02/%E6%84%9B%E4%B8%8A%E4%B8%8D%E8%A9%B2%E6%84%9B%E7%9A%84%E4%BA%BA-%E6%B5%B7%E8%8B%94%E7%86%8A%EF%BC%B8%E9%99%B3%E9%9D%9C%E6%80%A1.png?w=250&ssl=1",
+				"tags" : "第三者,外遇,三角關係, 放不下, 劈腿"
+			},
+			{
+				"title": "伴侶溝通技巧：焦逃配的小劇場",
+				"url"  : "https://inbound.tw/product/%E4%BC%B4%E4%BE%B6%E6%BA%9D%E9%80%9A%E6%8A%80%E5%B7%A7%E7%84%A6%E9%80%83%E9%85%8D%E7%9A%84%E5%B0%8F%E5%8A%87%E5%A0%B4/",
+				"img"  : "https://i1.wp.com/inbound.tw/wp-content/uploads/2018/07/%E4%BC%B4%E4%BE%B6%E6%BA%9D%E9%80%9A%E6%8A%80%E5%B7%A7%E7%84%A6%E9%80%83%E9%85%8D%E7%9A%84%E5%B0%8F%E5%8A%87%E5%A0%B4.png?w=250&ssl=1",
+				"tags" : "結婚, 溝通, 吵架, 分手, 失戀"
+			},
+			{
+				"title": "聊天技巧：第一次見面就聊不停的約會話題",
+				"url"  : "https://inbound.tw/product-category/%E7%8F%BE%E5%A0%B4%E6%B4%BB%E5%8B%95/",
+				"img"  : "https://i2.wp.com/inbound.tw/wp-content/uploads/2018/02/%E4%BD%A0%E5%92%8C%E5%B0%8D%E6%96%B9%E8%B7%9D%E9%9B%A2%E6%9C%89%E5%A4%9A%E9%81%A0.png?resize=250%2C250&ssl=1",
+				"tags" : "單身, 聯誼, 聊天技巧, 溝通"
 			}
 		]
 
@@ -100,14 +207,20 @@ block body_script
 		})
 
 		function renderBooks() {
-			var book_num_list = [...Array(8).keys()];
+			var book_num_list = [...Array(24).keys()];
 			book_num_list = shuffle(book_num_list);
 			var book_num_1 = book_num_list[0];
 			var book_num_2 = book_num_list[1];
+			var book_num_3 = book_num_list[2];
+			var book_num_4 = book_num_list[3];
 			$('#book_1').attr('src', book_list[book_num_1].img).wrap('<a href="' + book_list[book_num_1].url + '" target="_blank" </a>')
-			$('#book_1_title').text(book_list[book_num_1].title + '（電子書）')
+			$('#book_1_title').text(book_list[book_num_1].title + '')
 			$('#book_2').attr('src', book_list[book_num_2].img).wrap('<a href="' + book_list[book_num_2].url + '" target="_blank" </a>')
-			$('#book_2_title').text(book_list[book_num_2].title + '（電子書）')
+			$('#book_2_title').text(book_list[book_num_2].title + '')
+			$('#book_3').attr('src', book_list[book_num_3].img).wrap('<a href="' + book_list[book_num_3].url + '" target="_blank" </a>')
+			$('#book_3_title').text(book_list[book_num_3].title + '')
+			$('#book_4').attr('src', book_list[book_num_4].img).wrap('<a href="' + book_list[book_num_4].url + '" target="_blank" </a>')
+			$('#book_4_title').text(book_list[book_num_4].title + '')
 		}
 
 		function shuffle(a) {
