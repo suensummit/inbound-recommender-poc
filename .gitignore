@@ -1,6 +1,6 @@
 public/tmp
 public/uploads
-public/stylesheets/style.css
+# public/stylesheets/style.css
 system.json
 
 # Logs

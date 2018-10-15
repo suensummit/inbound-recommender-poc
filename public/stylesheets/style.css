@@ -1,0 +1,753 @@
+        /*
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+*/
+    /*--reset--*/
+
+    html,
+    body,
+    div,
+    span,
+    applet,
+    object,
+    iframe,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    blockquote,
+    pre,
+    a,
+    abbr,
+    acronym,
+    address,
+    big,
+    cite,
+    code,
+    del,
+    dfn,
+    em,
+    img,
+    ins,
+    kbd,
+    q,
+    s,
+    samp,
+    small,
+    strike,
+    strong,
+    sub,
+    sup,
+    tt,
+    var,
+    b,
+    u,
+    i,
+    dl,
+    dt,
+    dd,
+    ol,
+    nav ul,
+    nav li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td,
+    article,
+    aside,
+    canvas,
+    details,
+    embed,
+    figure,
+    figcaption,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    output,
+    ruby,
+    section,
+    summary,
+    time,
+    mark,
+    audio,
+    video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    hgroup,
+    menu,
+    nav,
+    section {
+        display: block;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    blockquote,
+    q {
+        quotes: none;
+    }
+
+    blockquote:before,
+    blockquote:after,
+    q:before,
+    q:after {
+        content: '';
+        content: none;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+    /*--start editing from here--*/
+
+    a {
+        text-decoration: none;
+    }
+
+    .txt-rt {
+        text-align: right;
+    }
+    /* text align right */
+
+    .txt-lt {
+        text-align: left;
+    }
+    /* text align left */
+
+    .txt-center {
+        text-align: center;
+    }
+    /* text align center */
+
+    .float-rt {
+        float: right;
+    }
+    /* float right */
+
+    .float-lt {
+        float: left;
+    }
+    /* float left */
+
+    .clear {
+        clear: both;
+    }
+    /* clear float */
+
+    .pos-relative {
+        position: relative;
+    }
+    /* Position Relative */
+
+    .pos-absolute {
+        position: absolute;
+    }
+    /* Position Absolute */
+
+    .vertical-base {
+        vertical-align: baseline;
+    }
+    /* vertical align baseline */
+
+    .vertical-top {
+        vertical-align: top;
+    }
+    /* vertical align top */
+
+    nav.vertical ul li {
+        display: block;
+    }
+    /* vertical menu */
+
+    nav.horizontal ul li {
+        display: inline-block;
+    }
+    /* horizontal menu */
+
+    img {
+        max-width: 100%;
+    }
+    /*--end reset--*/
+
+    body {
+        font-family: 'PT Sans', sans-serif;
+        background: url(../images/bg.jpg)no-repeat 0px 0px;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -ms-background-size: cover;
+        background-attachment: fixed;
+        text-align: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .clearfix {
+        clear: both;
+    }
+    /**** LOGIN_SIGNUP ******/
+
+    h1.wthree {
+        text-transform: capitalize;
+        font-size: 3em;
+        text-align: center;
+        color: #fff;
+        margin: 0.5em 0;
+        font-weight: 600;
+        letter-spacing: 1px;
+    }
+
+    h2.wthree {
+        text-transform: capitalize;
+        font-size: 1em;
+        text-align: center;
+        color: #fff;
+        margin: 0.2em 0;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+    }
+    sup.wthree {
+        text-transform: capitalize;
+        font-size: 0.2em;
+        text-align: center;
+        color: #fff;
+    }
+    /* signup Form styles */
+
+    .login-section-agileits {
+        position: relative;
+        width: 30%;
+        margin: 3.3em auto 3.5em;
+        padding: 2.5em 1em;
+        background: rgba(255, 255, 255, 0.48);
+    }
+
+    .w3ls-icon {
+        margin-bottom: 2em;
+    }
+
+   
+    .wthree-left-txt {
+        padding: 1.2em 2em 2em;
+    }
+
+    .w3ls-icon span {
+        color: #00bcd4;
+        font-size: 1.1em;
+        background: #fff;
+        padding: 14px;
+        width: 80px;
+        height: 40px;
+    }
+
+    .w3ls-icon:nth-of-type(1) span {
+        color: #4ddba6;
+    }
+
+    .w3ls-icon:nth-of-type(2) span {
+        color: #eb5273;
+    }
+
+    .w3ls-icon:nth-of-type(3) span {
+        color: #00b9ef;
+    }
+
+    .w3ls-icon:nth-of-type(4) span {
+        color: #fc7e46;
+    }
+
+    .login-section-agileits input[type="text"],
+    .login-section-agileits input[type="password"],
+    .login-section-agileits input[type="email"] {
+        width: 70%;
+        padding: 0.85em 1em;
+        border: none;
+        outline: none;
+        color: #fff;
+        font-size: 1em;
+        letter-spacing: 1px;
+        background: #00bcd4;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -o-transition: 0.5s all;
+        -ms-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    .login-section-agileits input[type="text"] {
+        background: #4ddba6;
+    }
+
+    .login-section-agileits input[type="password"] {
+        background: #00b9ef;
+    }
+
+    .w3ls-icon input[type="password"]#password2 {
+        background: #fc7e46;
+    }
+
+    .login-section-agileits input[type="email"] {
+        background: #eb5273;
+    }
+
+    /*--a-btn3--*/
+.a-btn3{
+  background: #eac14d;
+    border: 1px solid #f5b74e;
+    padding: 8px 103px 6px 25px;
+    height: 41px;
+    display: inline-block;
+    position: relative;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    float: left;
+    margin: 10px;
+    overflow: hidden;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    font-family: 'Playfair Display', serif;
+}
+.a-btn3-text{
+        padding-top:2px;
+    display: block;
+    font-size: 18px;
+    white-space: nowrap;
+       color: #fff;
+    -webkit-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+    font-family: 'Playfair Display', serif;
+}
+.a-btn3-slide-text{
+    position: absolute;
+    top:40px;
+    left: 12px;
+    width: auto;
+    right:78px;
+    height: 0px;
+    background: #fff;
+    color: #999;
+    font-size: 13px;
+    white-space: nowrap;
+    text-indent: 15px;
+    overflow: hidden;
+    line-height: 30px;
+    -webkit-transition: height 0.3s linear;
+    -moz-transition: height 0.3s linear;
+    -o-transition: height 0.3s linear;
+    transition: height 0.3s linear;
+    font-family: 'Playfair Display', serif;
+}
+.a-btn3-icon-right{
+    position:absolute;
+    right:0px;
+    top:0px;
+    height:100%;
+    width:52px;
+    border-left:1px solid #f5b74e;
+    -webkit-box-shadow:1px 0px 1px rgba(255,255,255,0.4) inset;
+    -moz-box-shadow:1px 0px 1px rgba(255,255,255,0.4) inset;
+    box-shadow:1px 0px 1px rgba(255,255,255,0.4) inset;
+    font-family: 'Playfair Display', serif;
+}
+.a-btn3-icon-right span{
+    width:38px;
+    height:38px;
+    opacity:0.7;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-20px 0px 0px -20px;
+    background:transparent url(../images/arrow.png) no-repeat 50% 55%;
+    -webkit-transition:all 0.3s linear;
+    -moz-transition:all 0.3s linear;
+    -o-transition:all 0.3s linear;
+    transition:all 0.3s linear;
+}
+.a-btn3:hover{
+    height:65px;
+    -webkit-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    -moz-box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+    box-shadow:0px 1px 1px rgba(255,255,255,0.8) inset, 1px 1px 5px rgba(0,0,0,0.4);
+}
+.a-btn3:hover .a-btn3-text{
+    text-shadow:0px 1px 1px rgba(0,0,0,0.2);
+    color:#fff;
+}
+.a-btn3:hover .a-btn3-slide-text{
+    height:30px;
+}
+.a-btn3:hover .a-btn3-icon-right span{
+    opacity:1;
+    -webkit-transform:rotate(-45deg);
+    -moz-transform:rotate(-45deg);
+    -ms-transform:rotate(-45deg);
+    -o-transform:rotate(-45deg);
+    transform:rotate(-45deg);
+}
+.a-btn3:active{
+    position:relative;
+    top:1px;
+    background:#deb02d;
+    border-color:#d29a3a #cc9436 #c89133;
+    text-shadow:0 1px 0 #fee1a0;
+    -webkit-box-shadow:0 1px 1px #d4d4d4, inset 0 1px 0 #fed17e;
+    -moz-box-shadow:0 1px 1px #d4d4d4, inset 0 1px 0 #fed17e;
+    box-shadow:0 1px 1px #d4d4d4, inset 0 1px 0 #fed17e;
+}
+/*----*/
+    /*-- login --*/
+
+    input[type="submit"] {
+        background: #ffffff;
+        color: #00549c;
+        font-size: 1em;
+        text-transform: capitalize;
+        border: 2px solid transparent;
+        width: 89%;
+        outline: none;
+        cursor: pointer;
+        text-transform: uppercase;
+        -webkit-appearance: none;
+        padding: 0.7em 0;
+        font-weight: 600;
+        font-family: 'PT Sans', sans-serif;
+        transition: 0.5s all;
+        -webkit-transition: 0.5s all;
+        -moz-transition: 0.5s all;
+        -o-transition: 0.5s all;
+    }
+
+    input[type="submit"]:hover {
+        background: #00bcd4;
+        color: #fff;
+    }
+
+   
+
+    h3.form-head {
+        font-size: 1.6em;
+        font-weight: 600;
+        color: #005ba4;
+        margin: 0 0 1em 0;
+        text-transform: capitalize;
+    }
+
+    p.footer-agile,
+    p.footer-agile a {
+        padding: 0 0 2em;
+        color: #fff;
+        font-size: 1em;
+        letter-spacing: 1px;
+    }
+
+    ::-webkit-input-placeholder {
+        color: #fff;
+    }
+
+    :-moz-placeholder {
+        /* Firefox 18- */
+        color: #fff;
+    }
+
+    ::-moz-placeholder {
+        /* Firefox 19+ */
+        color: #fff;
+    }
+
+    :-ms-input-placeholder {
+        color: #fff;
+    }
+    /*--responsive--*/
+    /* -- Responsive code -- */
+
+    @media screen and (max-width: 1920px) {
+        .container {
+            margin: 8em auto;
+        }
+        h1.wthree {
+            margin: 2em 0 0;
+        }
+    }
+
+    @media screen and (max-width: 1680px) {
+        .container {
+            margin: 4em auto;
+        }
+    }
+
+    @media screen and (max-width: 1600px) {
+        h1.wthree {
+            margin: 1.5em 0 0;
+        }
+        .container {
+            margin: 3em auto;
+        }
+    }
+
+    @media screen and (max-width: 1280px) {}
+
+    @media screen and (max-width: 1080px) {
+        .login-section-agileits {
+            width: 40%;
+        }
+    }
+
+    @media screen and (max-width: 1050px) {
+        h1.wthree {
+            margin: 1.2em 0 0;
+        }
+    }
+
+    @media screen and (max-width: 1024px) {
+        h1.wthree {
+            font-size: 2.8em;
+        }
+        .wthree-left-txt {
+            padding: 1.7em 2em 2em;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+       
+        .container {
+            width: 62%;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .container {
+            width: 64%;
+        }
+        .login-section-agileits {
+            width: 47%;
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        .login-section-agileits {
+            width: 50%;
+        }
+        h1.wthree {
+            font-size: 2.7em;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        h1.wthree {
+            font-size: 2.6em;
+        }
+    }
+
+    @media screen and (max-width: 736px) {
+        h1.wthree {
+            font-size: 2.5em;
+        }
+        .login-section-agileits {
+            width: 56%;
+        }
+        h3.form-head {
+            font-size: 1.5em;
+        }
+    }
+
+    @media screen and (max-width: 667px) {
+        .container {
+            width: 71%;
+        }
+        .login-section-agileits {
+            width: 64%;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .wthree-left-txt {
+            padding: 1.7em 1em;
+        }
+        h1.wthree {
+            font-size: 2.4em;
+        }
+        .login-section-agileits {
+            margin: 2em auto;
+        }
+        .login-section-agileits input[type="text"],
+        .login-section-agileits input[type="password"],
+        .login-section-agileits input[type="email"] {
+            padding: 0.7em 1em;
+        }
+        .w3ls-icon span {
+            padding: 12px;
+            height: 18px;
+        }
+        input[type="submit"] {
+            padding: 0.6em 0;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .container {
+            width: 74%;
+        }
+        .login-section-agileits input[type="text"],
+        .login-section-agileits input[type="password"],
+        .login-section-agileits input[type="email"] {
+            padding: 0.7em 1em;
+        }
+        p.footer-agile {
+            padding: 2em;
+            line-height: 1.7;
+        }
+        h1.wthree {
+            font-size: 2.3em;
+        }
+        .login-section-agileits {
+            margin: 2em auto 1em;
+        }
+        h3.form-head {
+            font-size: 1.3em;
+        }
+    }
+
+    @media screen and (max-width: 568px) {
+        .login-section-agileits {
+            width: 84.2%;
+        }
+        h1.wthree {
+            font-size: 2.2em;
+        }
+        .container {
+            margin: 2em auto;
+        }
+    }
+
+    @media screen and (max-width: 480px) {
+        .login-section-agileits {
+            width: 81.5%;
+        }
+
+        p.footer-agile {
+            padding: 0 2em 2em;
+            line-height: 1.5;
+            font-size: 0.9em;
+        }
+        h1.wthree {
+            font-size: 1.8em;
+        }
+    }
+
+    @media screen and (max-width: 414px) {
+       
+      
+        .login-section-agileits {
+            width: 78%;
+            padding: 2em;
+        }
+    }
+
+    @media screen and (max-width: 384px) {
+      
+    
+        .wthree-left-txt {
+            padding: 1em;
+        }
+        .login-section-agileits input[type="text"],
+        .login-section-agileits input[type="password"],
+        .login-section-agileits input[type="email"] {
+            width: 66.5%;
+        }
+        h3.form-head {
+            font-size: 1.2em;
+        }
+        .login-section-agileits {
+            width: 76.5%;
+        }
+
+    }
+
+    @media screen and (max-width: 375px) {
+        h1.wthree {
+            font-size: 1.7em;
+        }
+        
+        .container {
+            width: 76%;
+        }
+   
+        p.footer-agile {
+            font-size: 0.9em;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        h1.wthree {
+            font-size: 1.5em;
+        }
+        .container {
+            padding: 1em;
+            width: 83%;
+            margin: 1em auto;
+        }
+     
+        .login-section-agileits {
+            width: 86.5%;
+            padding: 2em 1em 3em;
+        }
+        .login-section-agileits input[type="text"],
+        .login-section-agileits input[type="password"],
+        .login-section-agileits input[type="email"] {
+            width: 63.5%;
+        }
+        h3.form-head {
+            font-size: 1.1em;
+        }
+        p.footer-agile {
+            padding: 0 0.5em 0em;
+        }
+        /* -- //Responsive code -- */
