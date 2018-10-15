@@ -1,47 +1,43 @@
 extends layout
 
 block body_content
-	div(style="padding-left: 10%")
-
-		div#question
+	div#question
+		h1.wthree 《人生小幫手》
+		h2.wthree 輸入你的心情，找找你需要什麼
+		div.login-section-agileits
+			h3.form-head 你怎麼了？
+			.w3ls-icon.w3ls-icon-A
+				.row
+					.col-sm-12
+						textarea.question(rows="10", placeholder="輸入你的心情或狀況⋯⋯")
 			.row
-				.col-sm-12
-					.index_title 愛情小幫手
-			.row
-				.col-sm-12
-					.index_subtitle 找找你需要什麼
-			.row
-				.col-sm-12
-					textarea.question(rows="5", placeholder="怎麼了？描述一下你們之間的感情狀況")
-			.row
-				.col-sm-4
 				.col-sm-4
 					a.btn.btn-lg.btn-block#submit(href="/") 送出
 
-		div#answer(hidden="hidden")
-			.row
-				.col-sm-12
-					.index_title 推薦你
-			.row
-				.col-sm-12
-					.index_subtitle 
-			.row
-				.col-sm-3
-					img#book_1(src="")
-					.answer#book_1_title
-				.col-sm-3
-					img#book_2(src="")
-					.answer#book_2_title
-				.col-sm-3
-					img#book_3(src="")
-					.answer#book_3_title
-				.col-sm-3
-					img#book_4(src="")
-					.answer#book_4_title
-			.row
-				.col-sm-4
-				.col-sm-4
-					a.btn.btn-lg.btn-block(href="/") 再問一次
+	div#answer(hidden="hidden")
+		.row
+			.col-sm-12
+				.index_title 推薦你
+		.row
+			.col-sm-12
+				.index_subtitle 
+		.row
+			.col-sm-3
+				img#book_1(src="")
+				.answer#book_1_title
+			.col-sm-3
+				img#book_2(src="")
+				.answer#book_2_title
+			.col-sm-3
+				img#book_3(src="")
+				.answer#book_3_title
+			.col-sm-3
+				img#book_4(src="")
+				.answer#book_4_title
+		.row
+			.col-sm-4
+			.col-sm-4
+				a.btn.btn-lg.btn-block(href="/") 再問一次
 
 block body_script
 	script.

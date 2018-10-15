@@ -74,7 +74,7 @@ function initApp()
 	app.use(multer({dest: global.FOLDER_TMP}).single('file_origin'));
 	app.use(cookieParser());
 	app.use(session({
-		secret: 'cloudeep',
+		secret: 'inbound.tw',
 		resave: false,
 		saveUninitialized: true
 	}));
@@ -83,10 +83,10 @@ function initApp()
 	app.use(passport.initialize());
 	app.use(passport.session());
 
-	app.use(require('stylus').middleware({
+	/*app.use(require('stylus').middleware({
 		src: path.join(__dirname + '/public'),
 		compress: true
-	}));
+	}));*/
 	app.use(require('express-minify')());
 	app.use(express.static(path.join(__dirname, 'public'), { maxAge:3600 }));
 
