@@ -15,29 +15,24 @@ block body_content
 					a.btn.btn-lg.btn-block#submit(href="/") 送出
 
 	div#answer(hidden="hidden")
-		.row
-			.col-sm-12
-				.index_title 推薦你
-		.row
-			.col-sm-12
-				.index_subtitle 
-		.row
+		h1.wthree 推薦你
+		h2.wthree
+		div.row
 			.col-sm-3
 				img#book_1(src="")
-				.answer#book_1_title
+				h3.form-head.answer#book_1_title
 			.col-sm-3
 				img#book_2(src="")
-				.answer#book_2_title
+				h3.form-head.answer#book_2_title
 			.col-sm-3
 				img#book_3(src="")
-				.answer#book_3_title
+				h3.form-head.answer#book_3_title
 			.col-sm-3
 				img#book_4(src="")
-				.answer#book_4_title
-		.row
-			.col-sm-4
-			.col-sm-4
-				a.btn.btn-lg.btn-block(href="/") 再問一次
+				h3.form-head.answer#book_4_title
+			.row
+				.col-sm-4
+					a.btn.btn-lg.btn-block(href="/") 再問一次 
 
 block body_script
 	script.
