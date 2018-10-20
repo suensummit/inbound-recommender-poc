@@ -1,37 +1,42 @@
 extends layout
 
 block body_content
-	div#question
-		h1.wthree 《人生小幫手》
-		h2.wthree 輸入你的心情，找找你需要什麼
-		div.login-section-agileits
-			h3.form-head 你怎麼了？
-			.w3ls-icon.w3ls-icon-A
+	.row(style="height: 1.5em;")
+	.row
+		div#question
+			h1.wthree 《人生小幫手》
+			h2.wthree 輸入你的心情，找找你需要什麼
+			div.login-section-agileits
+				h3.form-head 你怎麼了？
+				.w3ls-icon.w3ls-icon-A
+					.row
+						.col-sm-12
+							textarea.question(rows="10", placeholder="輸入你的心情或狀況⋯⋯")
 				.row
-					.col-sm-12
-						textarea.question(rows="10", placeholder="輸入你的心情或狀況⋯⋯")
-			.row
-				a.btn.btn-lg.btn-block#submit(href="/") 送出
+					a.btn.btn-lg.btn-block#submit(href="/") 送出
 
-	div#answer(hidden="hidden")
-		h1.wthree 推薦你
-		h2.wthree
-		div.row
-			.col-sm-3
-				img#book_1(src="")
-				h3.form-head.answer#book_1_title
-			.col-sm-3
-				img#book_2(src="")
-				h3.form-head.answer#book_2_title
-			.col-sm-3
-				img#book_3(src="")
-				h3.form-head.answer#book_3_title
-			.col-sm-3
-				img#book_4(src="")
-				h3.form-head.answer#book_4_title
-			.row
-				.col-sm-4
-					a.btn.btn-lg.btn-block(href="/") 再問一次 
+		div#answer(hidden="hidden")
+			h1.wthree 推薦你
+			h2.wthree
+			div
+				.row
+					.col-sm-4
+					.col-sm-4
+						p.footer-agile
+							a.btn.btn-lg.btn-block(href="/") 再問一次 
+				.row
+					.col-sm-3
+						img#book_1(src="")
+						h3.form-book.answer#book_1_title
+					.col-sm-3
+						img#book_2(src="")
+						h3.form-book.answer#book_2_title
+					.col-sm-3
+						img#book_3(src="")
+						h3.form-book.answer#book_3_title
+					.col-sm-3
+						img#book_4(src="")
+						h3.form-book.answer#book_4_title
 
 block body_script
 	script.
