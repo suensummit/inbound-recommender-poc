@@ -38,6 +38,9 @@ block body_content
 						img#book_4(src="")
 						h3.form-book.answer#book_4_title
 
+		div#quote(hidden="hidden")
+			h3.form-quote#quote_rec
+
 block body_script
 	script.
 		var book_list = [
@@ -193,16 +196,77 @@ block body_script
 			}
 		]
 
+		var outdoor = [
+			"穿上跑步鞋，出去慢跑一下吧",
+			"天氣那麼好，穿起你的運動鞋，來場登山健行",
+			"到附近的公園來場野餐吧！",
+			"聽著大自然中的蟲鳴鳥叫以及流水聲，靜坐冥想或躺下來小睡片刻",
+			"帶著睡袋，一起往森林去吧",
+			"躺在吊床上輕輕搖擺，看著藍天或星空",
+			"來個最近很流行的海上SUP（不知道是什麼？上網查查囉！）",
+			"到公園編個小花圈"
+		]
+
+		var indoor = [
+			"靜下心，讀一本一直很想看的書/小說",
+			"開啟收音機，讓眼睛休息休息，聽聽廣播",
+			"好久沒有來場戲劇性的人生，那就來看看別人的戲劇表演囉",
+			"找個喜歡的偶像，聽場他的演唱會",
+			"有多久沒有好好坐下來寧聽音樂會了呢？聽音樂會沈浸在音符裡吧",
+			"活到老，學到老，找場有興趣的主題，聽聽演講",
+			"我們的老祖先給我們許多智慧語錄，找找他們人生語錄吧",
+			"到底是先有雞還是先有蛋？動動腦兒做些哲學性的思考",
+			"挑戰自己的柔軟度做做瑜伽",
+			"一直坐著身體都僵硬了吧！做些簡單伸展，放鬆一下",
+			"快看看你旁邊那隻可愛的寵物，停下手上的動作和寵物一起玩耍吧",
+			"有好久沒跟其他人親密接觸了嗎？幫家人／朋友按摩一下增進感情囉",
+			"不想出門運動？可購買運動DVD，在家自己練習",
+			"到圖書館借書，享受一下學生時期",
+			"關掉手機，開啟電視看看不一樣的節目",
+			"看看巨石強森的身材，還不趕快開始重量訓練",
+			"找個空間，跳跳舞",
+			"放個音樂，讓身體跟著音樂一起擺動！",
+			"泡個熱水澡／泡腳",
+			"覺得累了？幫自己做個按摩放鬆放鬆身心吧",
+			"在雨中撐傘漫步，靜靜的聽著下雨的聲音",
+			"找個陶藝工作坊，做出屬於自己的小作品～",
+			"拿起你的紙與筆，開始天馬行空的畫畫吧",
+			"拿起橡皮擦與美工刀，來場小型雕刻比賽吧！",
+			"放點背景音樂，開口唱首拿手歌曲",
+			"到失落戀花園上寫寫日記，記錄一下自己的情緒日記",
+			"唐朝有個李白，現代有個你，寫首詩詞，來個文青之夜",
+			"想吃什麼？找個食譜，為自己煮上一頓美味的飯吧！",
+			"出去好好吃一頓好吃的犒賞自己一下",
+			"聽說台北也是個藝術之都呢！找個美術館來場藝術之旅",
+			"有多久沒打掃家裡了？把家裡打掃乾淨，心情也會跟著晴朗的！"
+		]
+
 		$('#submit').on('click', function(event) {
 			event.preventDefault();
 
 			$('#question').hide();
-			renderBooks();
+			renderBooks($('.question')[0].value);
 			$('#answer').show();
+			renderQuotes();
+			$('#quote').show();
 		})
 
-		function renderBooks() {
-			var book_num_list = [...Array(24).keys()];
+		function renderBooks(question) {
+			console.log(question);
+			if ( question.indexOf('失戀') > -1 || question.indexOf('分手') > -1 ) { 
+				console.log('失戀');
+				var book_num_list = [0, 2, 3, 12, 19, 23];
+			} else if ( question.indexOf('第三者') > -1 || question.indexOf('劈腿') > -1 ) {
+				console.log('第三者');
+				var book_num_list = [1, 10, 11, 14, 15, 22, 23, 21];
+			} else if ( question.indexOf('曖昧') > -1 || question.indexOf('單身') > -1 ) {
+				console.log('曖昧');
+				var book_num_list = [4, 15, 16, 20, 24];
+			} else {
+				console.log('其他');
+				var book_num_list = [...Array(24).keys()];
+			}
+
 			book_num_list = shuffle(book_num_list);
 			var book_num_1 = book_num_list[0];
 			var book_num_2 = book_num_list[1];
@@ -216,6 +280,17 @@ block body_script
 			$('#book_3_title').text(book_list[book_num_3].title + '')
 			$('#book_4').attr('src', book_list[book_num_4].img).wrap('<a href="' + book_list[book_num_4].url + '" target="_blank" </a>')
 			$('#book_4_title').text(book_list[book_num_4].title + '')
+		}
+
+		navigator.geolocation.getCurrentPosition(function(location) {
+			console.log(location.coords.latitude);
+			console.log(location.coords.longitude);
+			console.log(location.coords.accuracy);
+		});
+
+		function renderQuotes() {
+			var quotes = shuffle(outdoor);
+			$('#quote_rec').text('今天的心靈小語：'+quotes[0]);
 		}
 
 		function shuffle(a) {

@@ -28,23 +28,22 @@ html(lang="zh-tw")
 			link(rel="stylesheet", href="https://www.w3schools.com/w3css/4/w3.css")
 
 	body
-		.bg
-			include includes/header
+		include includes/header
 
-			//- .container.page
-			block body_content
+		//- .container.page
+		block body_content
 
-			include includes/footer
+		include includes/footer
 
-			include includes/modal_dialogs
+		include includes/modal_dialogs
 
-			block init_script
-				script(src="https://code.jquery.com/jquery-1.11.1.min.js")
-				script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
-				script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js")
-				script(src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.4.1/moment-timezone.min.js")
-				script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/zh-tw.js")
+		block init_script
+			script(src="https://code.jquery.com/jquery-1.11.1.min.js")
+			script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.4.1/moment-timezone.min.js")
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/locale/zh-tw.js")
 
-				script(src="/javascripts/sprintf.min.js")
+			script(src="/javascripts/sprintf.min.js")
 
-			block body_script
+		block body_script
